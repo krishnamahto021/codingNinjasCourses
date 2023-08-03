@@ -1,16 +1,12 @@
 import React from "react";
 import style from "./Details.module.css";
 import coursesData from "../../../data/courses.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Details() {
-  const {courseId} = useParams();
-
-  // const course = coursesData.find((courseId));
+  const { courseId } = useParams();
   const course = coursesData.find((course) => course.id === courseId);
-  console.log(course)
-
-  if(!course){
+  if (!course) {
     return <h3>No any related Courses!</h3>
   }
 
@@ -28,7 +24,7 @@ function Details() {
         </div>
       </div>
 
-      <button className={style.button}>Start Learning</button>
+      <Link to={`/courses/learn/${courseId}`}><button className={style.button}>Start Learning</button></Link>
     </div>
   );
 }
