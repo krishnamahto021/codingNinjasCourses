@@ -1,8 +1,19 @@
 import React from "react";
 import style from "./Details.module.css";
 import coursesData from "../../../data/courses.json";
+import { useParams } from "react-router-dom";
 
 function Details() {
+  const {courseId} = useParams();
+
+  // const course = coursesData.find((courseId));
+  const course = coursesData.find((course) => course.id === courseId);
+  console.log(course)
+
+  if(!course){
+    return <h3>No any related Courses!</h3>
+  }
+
   return (
     <div className={style.courses_container}>
       <div className={style.card_container}>

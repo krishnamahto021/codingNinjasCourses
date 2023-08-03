@@ -23,7 +23,7 @@ function Nav() {
             <h4>Coding Ninjas</h4>
           </div>
           <div className={style.nav_details}>
-            <Link to='/courses' onClick={handleClick}><button>{isClicked ? 'On Course' : 'Courses'}</button></Link>
+            <Link to='/courses' onClick={handleClick}><button>{isClicked ? 'On Course' : 'Go To Courses'}</button></Link>
           </div>
         </div>
       </nav>
