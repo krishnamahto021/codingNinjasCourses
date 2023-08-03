@@ -9,7 +9,7 @@ function Chapter() {
   return (
     <>
       <div>
-        <h1>{chapter.title}</h1><br />
+        <h1>{chapter.title}</h1><hr/>
         <p>{chapter.description}</p> <br />
         <p className={styles.para}>{chapter.details}</p>
         <br />
